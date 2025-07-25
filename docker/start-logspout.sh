@@ -1,0 +1,1 @@
+docker run --restart=always --name logspout -d -v=/run/user/1000/docker.sock:/var/run/docker.sock -e SYSLOG_HOSTNAME="Dev/{{.ContainerName}}" gliderlabs/logspout syslog+tls://logs4.papertrailapp.com:31361
