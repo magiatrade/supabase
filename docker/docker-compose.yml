@@ -445,7 +445,7 @@ services:
       LOGFLARE_PUBLIC_ACCESS_TOKEN: ${LOGFLARE_PUBLIC_ACCESS_TOKEN}
     command: [ "--config", "/etc/vector/vector.yml" ]
     security_opt:
-      - "label=disable"
+      - "apparmor:unconfined"
 
   # Update the DATABASE_URL if you are using an external Postgres database
   supavisor:
